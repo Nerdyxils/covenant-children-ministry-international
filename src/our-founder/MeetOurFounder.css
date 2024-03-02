@@ -1,0 +1,124 @@
+.founder-section {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Changed to center to reduce gap and evenly distribute space */
+    background-color: #1D3F6F;
+    color: white;
+    padding: 100px 20px; /* Reduced top and bottom padding */
+    position: relative;
+    background-size: cover;
+    background-position: bottom right;
+    gap: 20px; /* Adds a gap between text and image for better spacing */
+  }
+  
+  .founder-content {
+    max-width: 600px;
+    animation: slideInFromLeft 0.5s ease-out forwards;
+  }
+  
+  .founder-content h2 {
+    font-family: 'HelveticaNeue', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 110%;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+  }
+  
+  .founder-content p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .founder-image-container {
+    position: relative;
+    animation: slideInFromRight 0.5s ease-out forwards;
+  }
+  
+  .founder-image-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .founder-name {
+    bottom: 50px;
+    left: 30px;
+    color: white;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8.74534px;
+    gap: 4.37px;
+    position: absolute;
+    background: #312C2C;
+    border-radius: 14.2112px 0px 14.2112px 14.2112px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.4907px;
+    line-height: 100%;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+}
+  
+  /* Animations */
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .founder-section {
+      flex-direction: column;
+      text-align: left;
+    }
+  
+    .founder-content, .founder-image-container {
+      max-width: 100%;
+    }
+  
+    .founder-image-container {
+      margin-top: 20px;
+    }
+  
+    /* Adjust animations for smaller screens if needed */
+    .founder-content, .founder-image-container {
+      animation: none;
+    }
+
+    .founder-content h2  {
+        font-size:24px;
+    }
+
+    .founder-content p {
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  

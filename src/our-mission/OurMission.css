@@ -35,17 +35,19 @@
   /* Media Queries for additional responsiveness */
   @media (max-width: 768px) {
     .mission-subheading {
-      font-size: 1.5rem; /* Smaller font size on smaller screens */
+      font-size: 24px; /* Smaller font size on smaller screens */
     }
   
     .mission-paragraph {
-      font-size: 1.2rem; /* Smaller font size on smaller screens */
-      max-width: 100%; /* Allows the text to fill the container on smaller screens */
+      font-size: 28px; /* Smaller font size on smaller screens */
+      max-width: 100%;
+      line-height: 110%; 
+      width: 95%;
     }
   
     .mission-section::after {
-      width: 50%; /* Larger relative width on smaller screens */
-      max-width: 150px; /* Adjusts the maximum size for smaller screens */
+      width: 50%; 
+      max-width: 150px; 
     }
   }
   

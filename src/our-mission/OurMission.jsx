@@ -1,22 +1,20 @@
 import React from 'react';
 import './OurMission.css';
+import bgArt from '../assets/bg-art.png';
 
 const OurMission = () => {
-  // Note: Adjusted the path to not use '..' before 'assets'
-  const backgroundImageUrl = `${process.env.PUBLIC_URL}/assets/bg-art.png`;
-
-  // This will serve as the container that mimics the ::after pseudo-element
-  const missionAfterStyle = {
-    backgroundImage: `url(${backgroundImageUrl})`,
-    backgroundSize: 'contain',
+    
+const missionAfterStyle = {
+    backgroundImage: `url(${bgArt})`,
+    backgroundSize: 'auto',
     backgroundRepeat: 'no-repeat',
     position: 'absolute',
     bottom: '20px',
     right: '20px',
-    width: '25%',
+    width: '100%',
     maxWidth: '100px',
-    // height: '100px',
-  };
+    height: '100px', 
+};
 
   return (
     <div className="mission-section">
@@ -28,4 +26,3 @@ const OurMission = () => {
 };
 
 export default OurMission;
-

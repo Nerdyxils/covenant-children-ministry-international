@@ -1,0 +1,190 @@
+.ministry-events-section {
+    text-align: center;
+    padding: 100px 15px; /* Increased padding, with a little horizontal padding for small screens */
+  }
+  
+  .ministry-events-heading h1,
+  .ministry-events-heading p {
+    margin: 0 auto 20px; /* Ensure a bottom margin for spacing */
+    max-width: 800px; /* Keeps text from becoming too wide on large screens */
+  }
+
+  .ministry-events-heading h1 {
+    animation: slideDown 1s ease-out;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 110%;
+    text-align: center;
+    color: #1F1F1F;
+
+  }
+  
+  .ministry-events-heading p {
+    animation: slideUp 1s ease-out;
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: #84888B;
+}
+  
+  .ministry-events-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; 
+    margin-top: 40px;
+  }
+  
+  .ministry-event {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on small screens */
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px; /* Space between image and CTA */
+    max-width: 800px; /* Restricts maximum width for larger screens */
+  }
+
+  .event-image {
+    animation: slideLeft 1s ease-out;
+  }
+  
+  .event-image img {
+    width: 100%;
+    max-width: 350px; /* Larger max-width for better visibility */
+    height: auto; /* Ensures the image aspect ratio is maintained */
+    box-sizing: border-box;
+    min-width: 389px;
+    min-height: 287px;
+    border: 1px solid #DDDDDD;
+    border-radius: 12px;
+}
+  
+  .event-cta {
+    flex: 1; /* Allows the CTA to fill available space */
+    max-width: 450px; /* Adjusts max width for CTA content */
+    text-align: left;
+    margin: 50px auto;
+    align-items: center;
+    justify-content: center;
+    animation: slideRight 1s ease-out;
+  }
+  
+  .event-cta h2, .event-cta p, .event-cta button {
+    margin: 0 0 20px; /* Adds more space below each element */
+  }
+  
+  .event-cta button {
+    padding: 10px 20px; /* Larger button for easier interaction */
+    cursor: pointer;
+    gap: 8px;
+    background: #1D3F6F;
+    border-radius: 4px;
+    color: #FFFFFF;
+    border: none;
+    font-size:14px;
+    margin-top: 20px;
+}
+
+.event-cta button:hover {
+    background: #031f46;
+}
+
+  /* ANIMATIONS */
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .ministry-event {
+      flex-direction: column;
+      align-items: center; /* Stack items vertically and center them */
+    }
+  
+    .event-cta {
+      text-align: center; /* Center-aligns CTA text for smaller screens */
+    }
+
+    .event-image, .event-cta {
+        animation: none; /* Optional: Remove animations on smaller screens for simplicity */
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .ministry-events-heading h1 {
+      font-size: 1.75rem; /* Smaller font size for very small screens */
+    }
+  
+    .ministry-events-heading p {
+      font-size: 1rem; /* Smaller font size for paragraph */
+    }
+
+    .event-image img {
+        width: 80% !important;
+    }
+
+    .event-cta {
+        text-align: left;
+        width: 100%;
+        margin: 5px auto;
+    }
+  
+    .event-cta h2 {
+      font-size: 24px; /* Adjust heading size in CTA for better readability */
+    }
+  
+    .event-cta p {
+      font-size: 14px; /* Adjust paragraph size for consistency */
+      /* width: 80%; */
+      text-align: left;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
