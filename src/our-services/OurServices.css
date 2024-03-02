@@ -1,0 +1,109 @@
+.services-section {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f5f5f5; /* Adjust background color as needed */
+  }
+
+  .services-header {
+    margin-bottom: 100px;
+  }
+  
+  .services-header .services-intro {
+    font-size: 20px; /* Small lettering for 'Our Services' */
+    color: #333; /* Adjust text color as needed */
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 28px;
+    color: #1D3F6F;
+}
+  
+  .services-header h2 {
+    margin: 10px 0 40px; /* Spacing around 'Come Worship With Us' heading */
+    color: #333; /* Adjust heading color as needed */
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 110%;
+    color: #1F1F1F;
+  }
+  
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .service-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the content */
+    align-items: center; /* Horizontally centers the content */
+    height: 100%; /* Makes sure the box takes full height of the grid area */ 
+
+    border: 2px solid grey;
+    padding: 30px;
+    width: calc(33.333% - 40px); /* Three boxes per row, accounting for gap */
+    box-sizing: border-box;
+    border: 1px solid #E2E2E2;
+    border-radius: 12px;
+    min-width: 420px;
+    min-height: 250px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for better depth */
+}
+
+
+  .service-box:hover {
+    transform: scale(1.05); /* Pop effect on hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  .service-box h3 {
+    margin-top: 0;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 110%;
+    color: #1F1F1F;
+    margin-bottom: 20px;
+}
+  
+.service-box p {
+    margin-bottom: 0;
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: #84888B;
+}
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .service-box {
+      width: calc(50% - 40px); /* Two boxes per row on tablets and below */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .service-box {
+      width: 90%; /* Full width for mobile devices */
+      padding: 20px;
+      min-width: 90%;
+    }
+
+    .service-box h3 {
+        font-size:24px;
+    }
+
+    .service-box p {
+        font-size: 16px;
+    }
+  }
+  
