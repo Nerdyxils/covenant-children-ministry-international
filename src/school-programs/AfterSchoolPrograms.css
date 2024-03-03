@@ -1,6 +1,7 @@
 .after-school-programs {
     text-align: center;
     padding: 100px 20px;
+    background-color: #F5F5F5;
   }
   
   .after-school-programs h2,
@@ -47,6 +48,7 @@
     height: auto;
     width: auto; /* Ensures the width of the image is based on its aspect ratio */
     flex-grow: 1; /* Allows the image to grow based on the flex value set inline */
+    animation: zoomIn 0.5s ease-out forwards; /* Apply the zoom animation */
   }
 
   /* First row specific styles */
@@ -76,6 +78,18 @@
   .second-row img:not(:first-child) {
     margin-left: 10px;
   }
+
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0.5;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
   
   @media (min-width: 768px) {
     /* Disable horizontal scrolling for desktop */

@@ -1,0 +1,129 @@
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 50px;
+    gap: 20px;
+  }
+  
+  .contact-info h2, .contact-info p, .contact-detail {
+    margin-bottom: 15px;
+  }
+
+  .contact-info h2 {
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 110%;
+    color: #1F1F1F;
+  }
+
+  .contact-info p {
+    width: 100%;
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #747474;
+}
+  
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+    font-family: 'Roboto Condensed';
+    padding: 0px;
+    width: 331px;
+    height: 28px;
+}
+  
+  .icon {
+    margin-right: 10px;
+  }
+  
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    background-color: transparent;
+    box-sizing: border-box;
+  }
+  
+  .contact-form input[type="text"]:focus,
+  .contact-form input[type="email"]:focus,
+  .contact-form textarea:focus {
+    background-color: #eee;
+    outline: none;
+  }
+  
+  .contact-form button {
+    padding: 10px 20px;
+    background: #1D3F6F;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .contact-form button {
+    background: #031f46;
+  }
+
+  input {
+    height: 50px;
+    }
+
+    .input-error {
+        border-color: red ; 
+        background-color: #ffe5e5; 
+      }
+      
+      .status-message.error-message {
+        color: red; 
+      }
+
+  textarea {
+    height: 212px;
+  }
+  
+  .status-message {
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-section {
+      flex-direction: column;
+      padding: 100px 20px;
+    }
+  
+    .contact-info, .contact-form {
+      width: 100%;
+    }
+  
+    .contact-form {
+      margin-top: 20px;
+    }
+
+    .contact-info h2 {
+        font-size: 24px;
+    }
+
+    .contact-info p {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+  }
+  

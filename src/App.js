@@ -1,5 +1,6 @@
 import './App.css';
 import AboutUs from './about/AboutUs';
+import ContactUs from './contact-us/ContactUs';
 import HeroSection from './hero/hero.component';
 import MeetOurFounder from './our-founder/MeetOurFounder';
 import OurMinistryEvents from './our-ministry/OurMinistryEvents';
@@ -17,6 +18,7 @@ function App() {
       <OurMinistryEvents />
       <MeetOurFounder />
       <AfterSchoolPrograms />
+      <ContactUs />
     </>
   );
 }
