@@ -52,7 +52,7 @@ const ContactUs = () => {
     };
 
   return (
-    <div className="contact-section">
+    <div className="contact-section" id="contact">
       <div className="contact-info">
         <h2>Contact Us</h2>
         <p>For more information about our ministry or to get involved, please contact us with the details below. We look forward to connecting with you and welcoming you to our Covenant Children family.</p>

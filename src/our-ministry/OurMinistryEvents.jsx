@@ -5,7 +5,7 @@ const OurMinistryEvents = () => {
 
     const prayIMG = `${process.env.PUBLIC_URL}/assets/pray.png`;
   return (
-    <div className="ministry-events-section">
+    <div className="ministry-events-section" id="events">
       <div className="ministry-events-heading">
         <h1>Our Ministry Events</h1>
         <p>Throughout the year, we organize various events such as worship services, Bible studies, educational programs, family celebrations, and outreach initiatives to serve our community and spread God's love.</p>

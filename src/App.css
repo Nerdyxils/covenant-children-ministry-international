@@ -30,6 +30,11 @@ p, li, a {
   line-height: 20px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 
 
 

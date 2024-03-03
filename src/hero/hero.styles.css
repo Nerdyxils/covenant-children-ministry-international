@@ -25,16 +25,22 @@
 }
 
 .hero-nav {
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     display: flex;
+    transition: background-color 0.3s ease;
     justify-content: space-between;
     padding: 20px;
     box-sizing: border-box;
     align-items: center;
     z-index: 1000;
 }
+
+.hero-nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.7); /* Or any other color you prefer */
+  }
   
 .logo {
     max-width: 150px;

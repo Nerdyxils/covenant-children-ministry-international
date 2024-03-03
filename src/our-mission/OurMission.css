@@ -28,6 +28,10 @@
     color: #1F1F1F;
     width: 75%;
   }
+
+  .mission-pad {
+    margin-left: 40px;
+  }
   
 
   
@@ -49,5 +53,9 @@
       width: 50%; 
       max-width: 150px; 
     }
+
+    .mission-pad {
+        margin-left: 0px;
+      }
   }
   

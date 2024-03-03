@@ -17,11 +17,13 @@ const missionAfterStyle = {
 };
 
   return (
-    <div className="mission-section">
+    <div className="mission-section" id="mission">
         <div style={missionAfterStyle}></div> 
+        <div className="mission-pad">
         <h2 className="mission-subheading">Our Mission</h2>
         <p className="mission-paragraph">At Covenant Children Ministry International, our mission is to help children discover their God-given potential, lead them to a relationship with Jesus Christ, and provide support and resources to families worldwide.</p>
-    </div>
+        </div> 
+        </div>
   );
 };
 

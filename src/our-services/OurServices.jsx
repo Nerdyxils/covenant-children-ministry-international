@@ -12,7 +12,7 @@ const services = [
 
 const OurServices = () => {
   return (
-    <div className="services-section">
+    <div className="services-section" id="services">
       <div className="services-header">
         <p className="services-intro">Our Services</p>
         <h2>Come Worship With Us</h2>
