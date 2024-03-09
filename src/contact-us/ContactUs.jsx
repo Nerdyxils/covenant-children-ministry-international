@@ -57,8 +57,8 @@ const ContactUs = () => {
         <h2>Contact Us</h2>
         <p>For more information about our ministry or to get involved, please contact us with the details below. We look forward to connecting with you and welcoming you to our Covenant Children family.</p>
         <div className="contact-detail"><span className="icon">📧</span>hello@covenantchildrenministry.com</div>
-        <div className="contact-detail"><span className="icon">📞</span>+1 (555) 000-0000</div>
-        <div className="contact-detail"><span className="icon">📍</span>123 Sample St, Sydney NSW 2000 AU</div>
+        <div className="contact-detail"><span className="icon">📞</span>+1 (647) 407-0126</div>
+        <div className="contact-detail"><span className="icon">📍</span>3687 Nashua Drive, Unit 8 Malton, Mississauga, ON Canada. L4V 1V5</div>
       </div>
       <form className="contact-form" onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>

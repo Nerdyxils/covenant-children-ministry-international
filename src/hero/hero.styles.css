@@ -129,6 +129,10 @@
 .hero-subheading { animation-delay: 1s; }
 .hero-cta { animation-delay: 1.5s; }
 
+.hero-cta a { 
+    color: #fff
+}
+
 @keyframes fadeInUp {
     from {
         transform: translateY(20px);

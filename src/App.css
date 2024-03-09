@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: local('HelveticaNeue'), url('./helvetica-neue-5/HelveticaNeueBlack.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   padding: 0;

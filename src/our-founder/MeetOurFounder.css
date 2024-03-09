@@ -64,6 +64,10 @@
     letter-spacing: -0.015em;
     color: #FFFFFF;
 }
+
+.small__name {
+  font-size: 14px;
+}
   
   /* Animations */
   @keyframes slideInFromLeft {

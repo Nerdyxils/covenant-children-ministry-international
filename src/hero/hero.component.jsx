@@ -48,7 +48,7 @@ const HeroSection = () => {
             <div className="hero-content">
                 <h1 className="hero-heading">Where faith meets compassion, and children find their place to flourish in Christ's love.</h1>
                 <p className="hero-subheading">Join us at Covenant Children Ministry International</p>
-                <button className="hero-cta">Learn More</button>
+                <button className="hero-cta" ><a href="#about">Learn More</a></button>
             </div>
         </div>
     );
