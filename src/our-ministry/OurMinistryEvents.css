@@ -44,7 +44,7 @@
     display: flex;
     flex-wrap: wrap; /* Allows items to wrap on small screens */
     justify-content: center; /* Centers items horizontally */
-    gap: 20px; /* Space between image and CTA */
+    gap: 70px; /* Space between image and CTA */
     max-width: 800px; /* Restricts maximum width for larger screens */
   }
 
@@ -167,7 +167,7 @@
 
     .event-image img {
         width: 80% !important;
-        min-width: 370px;
+        min-width: 350px;
     }
 
     .event-cta {

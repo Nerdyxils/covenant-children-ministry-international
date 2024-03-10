@@ -1,5 +1,6 @@
 {
   "name": "covenant-children-ministry-international",
+  "homepage": "http://covenantchildrenministry.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
