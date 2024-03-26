@@ -33,7 +33,17 @@ const MeetOurFounder = () => {
         <div className="founder-section" ref={sectionRef} style={{ backgroundImage: `url(${backgroundGraphic})` }}>
             <div className={`founder-content ${isVisible ? 'slide-in-from-left' : ''}`}>
                 <h2>Meet our Founder</h2>
-                <p>Established in 2010 by Evangelist Bolanle Oyeniyi, Covenant Children Ministry International is a Pentecostal Christian organization dedicated to nurturing and empowering children. From humble beginnings to a growing community, we focus on providing holistic support to children and families, regardless of background.</p>
+                <p>In the year 2007, God revealed to Evangelist Bolanle Oyeniyi to establish a children ministry and to be successful in this journey; Evangelist Bolanle Oyeniyi went to school for Diploma in Social Service Work (Centennial College) and a certificate in
+                    Dual Diagnosis (George Brown) to have understanding and to be licenced in dealing with children
+                    and the autistic children. Prior to her establishing Covenant Children Ministry, Evangelist Bolanle
+                    Oyeniyi for many years work as the head children department of Christ Apostolic Church (Vineyard
+                    of Comfort) Toronto and Winnipeg branch
+                    After Evangelist Bolanle Oyeniyi completed her degree in Child Education in 2010, she established
+                    Covenant Children Ministry International with 10 people. The ministry has visiting children from
+                    different churches, giving lectures, presenting gifts to underprivileged children. Also, the Ministry
+                    distributes the children bible to all children from different background. The Ministry has assisted
+                    thousands of autistic children and children in foster homes; reuniting the children and their families
+                    and counseling broken families.</p>
             </div>
             <div className={`founder-image-container ${isVisible ? 'slide-in-from-right' : ''}`}>
                 <img src={founderImage} alt="Founder" />
