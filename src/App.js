@@ -7,6 +7,7 @@ import MeetOurFounder from './our-founder/MeetOurFounder';
 import OurMinistryEvents from './our-ministry/OurMinistryEvents';
 import OurMission from './our-mission/OurMission';
 import OurServices from './our-services/OurServices';
+import EventCarousel from './our-events/OurEvents.jsx'
 import AfterSchoolPrograms from './school-programs/AfterSchoolPrograms';
 import ScrollToTop from './scroll/ScrollToTop';
 
@@ -16,6 +17,7 @@ function App() {
       <HeroSection />
       <AboutUs />
       <OurServices />
+      <EventCarousel/>
       <OurMission />
       <OurMinistryEvents />
       <MeetOurFounder />
