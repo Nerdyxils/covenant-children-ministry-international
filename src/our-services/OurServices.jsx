@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './OurServices.css'; // Make sure this CSS file is in the same directory
+import '../pages/pages.css'; // Import for consistent button styling
 
 const services = [
   { title: "Worship & Prayer", description: "Whenever we gather with the kids, we engage in uplifting worship, praise and prayers." },
@@ -24,6 +26,9 @@ const OurServices = () => {
             <p>{service.description}</p>
           </div>
         ))}
+      </div>
+      <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+        <Link to="/services" className="btn btn-primary">Explore All Our Services</Link>
       </div>
     </div>
   );

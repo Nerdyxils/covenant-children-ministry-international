@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import event1 from '../assets/event1.jpg'
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './OurEvent.css';
+import '../pages/pages.css'; // Import for consistent button styling
 
 const EventCarousel = () => {
     const events = [
@@ -49,6 +51,9 @@ const EventCarousel = () => {
                     </div>
                 ))}
             </Carousel>
+            <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+                <Link to="/events" className="btn btn-primary">View All Our Events</Link>
+            </div>
         </div>
     );
 };

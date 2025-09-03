@@ -1,128 +1,204 @@
 .founder-section {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Changed to center to reduce gap and evenly distribute space */
-    background-color: #1D3F6F;
-    color: white;
-    padding: 100px 20px; /* Reduced top and bottom padding */
-    position: relative;
-    background-size: cover;
-    background-position: bottom right;
-    gap: 20px; /* Adds a gap between text and image for better spacing */
-  }
-  
-  .founder-content {
-    max-width: 600px;
-    animation: slideInFromLeft 0.5s ease-out forwards;
-  }
-  
-  .founder-content h2 {
-    font-family: 'HelveticaNeue', sans-serif;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 110%;
-    color: #FFFFFF;
-    margin-bottom: 30px;
-  }
-  
-  .founder-content p {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  .founder-image-container {
-    position: relative;
-    animation: slideInFromRight 0.5s ease-out forwards;
-  }
-  
-  .founder-image-container img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .founder-name {
-    bottom: 50px;
-    left: 30px;
-    color: white;
-    padding: 5px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 8.74534px;
-    gap: 4.37px;
-    position: absolute;
-    background: #312C2C;
-    border-radius: 14.2112px 0px 14.2112px 14.2112px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17.4907px;
-    line-height: 100%;
-    letter-spacing: -0.015em;
-    color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1D3F6F;
+  color: white;
+  padding: 120px 40px;
+  position: relative;
+  background-size: cover;
+  background-position: bottom right;
+  gap: 60px;
+}
+
+.founder-content {
+  max-width: 600px;
+  animation: slideInFromLeft 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.founder-content h2 {
+  font-family: 'HelveticaNeue', 'Arial', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.founder-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.6));
+  border-radius: 2px;
+}
+
+.founder-content p {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+}
+
+.founder-image-container {
+  position: relative;
+  animation: slideInFromRight 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  max-width: 500px;
+  flex: 1;
+}
+
+.founder-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1.05) contrast(1.05);
+}
+
+.founder-image-container:hover img {
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.founder-name {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: linear-gradient(135deg, rgba(49, 44, 44, 0.95), rgba(49, 44, 44, 0.85));
+  border-radius: 16px 0px 16px 16px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.founder-name:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .small__name {
   font-size: 14px;
+  opacity: 0.8;
+  margin-top: 4px;
+  font-weight: 400;
 }
-  
-  /* Animations */
-  @keyframes slideInFromLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideInFromRight {
-    from {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .founder-section {
-      flex-direction: column;
-      text-align: left;
-    }
-  
-    .founder-content, .founder-image-container {
-      max-width: 100%;
-    }
-  
-    .founder-image-container {
-      margin-top: 20px;
-    }
-  
-    /* Adjust animations for smaller screens if needed */
-    .founder-content, .founder-image-container {
-      animation: none;
-    }
 
-    .founder-content h2  {
-        font-size:24px;
-    }
-
-    .founder-content p {
-        font-family: 'Roboto Condensed';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        color: rgba(255, 255, 255, 0.8);
-    }
+/* Enhanced Animations */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-60px);
+    opacity: 0;
   }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .founder-section {
+    padding: 100px 30px;
+    gap: 40px;
+  }
+  
+  .founder-image-container {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .founder-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+    gap: 40px;
+  }
+
+  .founder-content {
+    max-width: 100%;
+  }
+
+  .founder-content h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .founder-image-container {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .founder-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .founder-content p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .founder-name {
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .founder-section {
+    padding: 60px 15px;
+    gap: 30px;
+  }
+
+  .founder-content h2 {
+    font-size: 2rem;
+  }
+
+  .founder-content p {
+    font-size: 1rem;
+  }
+
+  .founder-name {
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .small__name {
+    font-size: 12px;
+  }
+}
   

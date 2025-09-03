@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState }  from 'react';
+import { Link } from 'react-router-dom';
 import './AboutUs.css'; // Ensure this file is in the same directory
+import '../pages/pages.css'; // Import for consistent button styling
 
 const AboutUs = () => {
     const backgroundStyle = `${process.env.PUBLIC_URL}/assets/bg-art.png`;
@@ -49,6 +51,7 @@ const AboutUs = () => {
                 <div className={`about-text ${isVisible ? 'slide-in-left' : ''}`}>
                     <h1>About Us</h1>
                     <p>Established in 2010 by Evangelist Bolanle Oyeniyi, Covenant Children Ministry International is a Pentecostal Christian organization dedicated to nurturing and empowering children. From humble beginnings to a growing community, we focus on providing holistic support to children and families, regardless of background.</p>
+                    <Link to="/about" className="btn btn-primary">Learn More About Us</Link>
                 </div>
                 <div className={`about-image ${isVisible ? 'fade-in' : ''}`}>
                     <img src={`${process.env.PUBLIC_URL}/assets/about-us-image.png`} alt="About Us" />

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
 import './ContactUs.css';
+import '../pages/pages.css'; // Import for consistent button styling
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
@@ -46,7 +48,7 @@ const ContactUs = () => {
           });
         }, (err) => {
           console.log('FAILED...', err);
-          setStatusMessage('Error! Message didn’t go through');
+          setStatusMessage('Error! Message didn\'t go through');
           setIsError(true); // Set error state to true
         });
     };
@@ -58,7 +60,10 @@ const ContactUs = () => {
         <p>For more information about our ministry or to get involved, please contact us with the details below. We look forward to connecting with you and welcoming you to our Covenant Children family.</p>
         <div className="contact-detail"><span className="icon">📧</span>hello@covenantchildrenministry.com</div>
         <div className="contact-detail"><span className="icon">📞</span>+1 (647) 407-0126</div>
-        <div className="contact-detail"><span className="icon">📍</span>3687 Nashua Drive, Unit 8 Malton, Mississauga, ON Canada. L4V 1V5</div>
+        <div className="contact-detail"><span className="icon">📍</span>25 Claireport Crescent, Etobicoke, ON M9W 6P7, Canada</div>
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <Link to="/contact" className="btn btn-primary">Visit Our Full Contact Page</Link>
+        </div>
       </div>
       <form className="contact-form" onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>

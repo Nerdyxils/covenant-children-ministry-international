@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 // Assuming you have a logo image in your project
 import logo from '../assets/ccmilogo.svg'; 
@@ -8,14 +9,16 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <img src={logo} alt="Logo" />
+          <Link to="/">
+            <img src={logo} alt="Logo" />
+          </Link>
         </div>
         <nav className="footer-nav">
-          <a href="#about">About Us</a>
-          <a href="#services"> Our Services</a>
-          <a href="#services"> Our Mission</a>
-          <a href="#services"> Our Events</a>
-          <a href="#contact">Contact Us</a>
+          <Link to="/about">About Us</Link>
+          <Link to="/services">Our Services</Link>
+          <Link to="/mission">Our Mission</Link>
+          <Link to="/events">Our Events</Link>
+          <Link to="/contact">Contact Us</Link>
         </nav>
       </div>
       <br/>

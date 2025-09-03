@@ -1,30 +1,35 @@
 import './App.css';
-import AboutUs from './about/AboutUs';
-import ContactUs from './contact-us/ContactUs';
-import Footer from './footer/Footer';
-import HeroSection from './hero/hero.component';
-import MeetOurFounder from './our-founder/MeetOurFounder';
-import OurMinistryEvents from './our-ministry/OurMinistryEvents';
-import OurMission from './our-mission/OurMission';
-import OurServices from './our-services/OurServices';
-import EventCarousel from './our-events/OurEvents.jsx'
-import AfterSchoolPrograms from './school-programs/AfterSchoolPrograms';
-import ScrollToTop from './scroll/ScrollToTop';
+import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import LandingPage from './pages/LandingPage';
+import Layout from './components/Layout';
+import AboutPage from './pages/AboutPage';
+import ServicesPage from './pages/ServicesPage';
+import MissionPage from './pages/MissionPage';
+import EventsPage from './pages/EventsPage';
+import ContactPage from './pages/ContactPage';
+import ScrollToTop from './components/ScrollToTop';
+import suppressResizeObserverErrors from './utils/errorHandling';
 
 function App() {
+  useEffect(() => {
+    // Suppress ResizeObserver errors globally
+    suppressResizeObserverErrors();
+  }, []);
+
   return (
     <>
-      <HeroSection />
-      <AboutUs />
-      <OurServices />
-      <EventCarousel/>
-      <OurMission />
-      <OurMinistryEvents />
-      <MeetOurFounder />
-      <AfterSchoolPrograms />
-      <ContactUs />
-      <Footer />
       <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<Layout />}>
+          <Route path="about" element={<AboutPage />} />
+          <Route path="services" element={<ServicesPage />} />
+          <Route path="mission" element={<MissionPage />} />
+          <Route path="events" element={<EventsPage />} />
+          <Route path="contact" element={<ContactPage />} />
+        </Route>
+      </Routes>
     </>
   );
 }

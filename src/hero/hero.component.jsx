@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './hero.styles.css'; // Make sure the CSS file is in the same directory
+import '../pages/pages.css'; // Import for consistent button styling
 
 const HeroSection = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -15,10 +17,23 @@ const HeroSection = () => {
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+        // Add error handling for scroll events
+        const handleScrollWithErrorHandling = () => {
+            try {
+                handleScroll();
+            } catch (error) {
+                // Suppress ResizeObserver related errors
+                if (error.message?.includes?.('ResizeObserver')) {
+                    return;
+                }
+                console.warn('Scroll handler error:', error);
+            }
+        };
+
+        window.addEventListener('scroll', handleScrollWithErrorHandling);
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', handleScrollWithErrorHandling);
         };
     }, []);
 
@@ -28,7 +43,9 @@ const HeroSection = () => {
         <div className="hero-container" style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
             <nav className={`hero-nav ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="logo">
-                    <img src={`${process.env.PUBLIC_URL}/assets/ccmilogo.svg`} alt="Covenant Children Ministry International" />
+                    <Link to="/">
+                        <img src={`${process.env.PUBLIC_URL}/assets/ccmilogo.svg`} alt="Covenant Children Ministry International" />
+                    </Link>
                 </div>
                 <div className="menu-icon" onClick={toggleNav}>
                     {isNavOpen ? (
@@ -38,17 +55,17 @@ const HeroSection = () => {
                     )}
                 </div>
                 <ul className={`nav-menu ${isNavOpen ? 'open' : ''}`}>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Our Services</a></li>
-                    <li><a href="#mission">Our Mission</a></li>
-                    <li><a href="#events">Our Events</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><Link to="/about">About Us</Link></li>
+                    <li><Link to="/services">Our Services</Link></li>
+                    <li><Link to="/mission">Our Mission</Link></li>
+                    <li><Link to="/events">Our Events</Link></li>
+                    <li><Link to="/contact">Contact Us</Link></li>
                 </ul>
             </nav>
             <div className="hero-content">
                 <h1 className="hero-heading">Where faith meets compassion, and children find their place to flourish in Christ's love.</h1>
                 <p className="hero-subheading">Join us at Covenant Children Ministry International</p>
-                <button className="hero-cta" ><a href="#about">Learn More</a></button>
+                <Link to="/about" className="btn btn-primary">Learn More</Link>
             </div>
         </div>
     );
